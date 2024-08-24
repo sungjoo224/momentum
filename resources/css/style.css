@@ -1,0 +1,181 @@
+/* setting */
+*{padding: 0;margin: 0;}
+body{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+input,button{
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+h1,h2,div,form{
+    position: absolute;
+}
+img{
+    z-index: -1;
+    width: 100%;
+    filter: brightness(80%);
+}
+:focus{
+    outline: none;
+}
+.hidden {
+    display: none;
+}
+/* 시계 */
+#clock{
+    left: 50%;
+    top:  40px;
+    transform: translate(-50%, 0);
+    font-size: 40px;
+    color: #fff;
+    width: 340px;
+    height: 60px;
+    padding: 30px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+#clock.center{
+    left: 50%;
+    top: calc(50% - 120px);
+    transform: translate(-50%, -50%);
+}
+#clock div{
+    position: static;
+}
+#clock div:first-child{
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+/* 로그인, 인사말 */
+#login-form, #greeting{
+    width: 400px;
+    left: 50%;
+    top: 180px;
+    transform: translateX(-50%);
+    color: #fff;
+}
+#login-form{
+    width: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+}
+#login-form.hidden{
+    top: 160px;
+    transform: translate(-50%, 0);
+    color: #fff;
+}
+#login-form > input[type="text"]{
+    height: 50px;
+    width: calc(80% - 30px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    padding: 0 15px;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #fff;
+}
+#login-form > input[type="text"]::placeholder{
+    color: #fff;
+}
+#login-form > input[type="text"]:focus{
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: .25s ease-in-out;
+}
+#login-form > input[type="submit"]{
+    width: calc(20% - 10px);
+    margin-left: 3px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    color: rgb(255, 117, 117);
+}
+#greeting{
+    text-align: center;
+}
+
+/* 명언 */
+#quote{
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    color: #fff;
+}
+#quote > span:last-child{
+    position: relative;
+    opacity: 0.5;
+    margin-left: 20px;
+}
+#quote > span:last-child::before{
+    position: absolute;
+    content: "-";
+    left: -15px;
+}
+/* todo */
+/* todo-form */
+#todo-form{
+    left: 50%;
+    top: 230px;
+    transform: translateX(-50%);
+    width: 400px;
+}
+#todo-form > input{
+    width: calc(100% - 30px);
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    padding: 0 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+#todo-form > input::placeholder{
+    color: rgba(255, 255, 255, 0.3);
+}
+#todo-form > input:focus{
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    transition: .25s ease-in-out;
+}
+/* todo-list */
+#todo-list{
+    position: absolute;
+    left: 50%;
+    top: 290px;
+    transform: translateX(-50%);
+    width: 340px;
+    overflow-y: scroll;
+    border-radius: 15px;
+    padding: 30px 30px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+#todo-list > li~li{
+    margin-top: 8px;
+}
+#todo-list > li button{
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    cursor: pointer;
+}
+/* weather */
+#weather{
+    top: 15px;
+    right: 15px;
+    opacity: .5;
+    color: #fff;
+    font-size: 14px;
+}
+#weather > span:first-child{
+    padding-right: 10px;
+}
