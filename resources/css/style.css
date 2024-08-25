@@ -67,11 +67,11 @@ img{
     transform: translate(-50%,-50%);
     color: #fff;
 }
-#login-form.hidden{
+/* #login-form.hidden{
     top: 160px;
     transform: translate(-50%, 0);
     color: #fff;
-}
+}*/
 #login-form > input[type="text"]{
     height: 50px;
     width: 80%;
