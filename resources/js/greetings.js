@@ -14,7 +14,7 @@ const CENTER = "center";
 
 function onLoginSubmit(event) { //form sumit이 될때
     event.preventDefault();//새로고침을 막아줌(기본동작 막기)
-    loginForm.classList.add(HIDDEN_CLASSNAME ); //form에 .hidden 추가
+    loginForm.classList.add(HIDDEN_CLASSNAME); //form에 .hidden 추가
     clock.classList.add(CENTER);
     const username = loginInput.value; // input의 값은 username
     localStorage.setItem(USERNAME_KEY, username); //localStorage에 저장 
